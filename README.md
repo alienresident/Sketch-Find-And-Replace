@@ -2,6 +2,9 @@
 
 Finds text in selected layer(s) and all layers contained within - and replaces it with different text.  Now updated to do partial, case sensitive and full-document matching.
 
+##Screenshot
+![Alt text](/Screenshots/Screenshot.jpg?raw=true "Screenshot")
+
 ##Installation
 Download and unzip, then double-click on the .sketchplugin file to copy it to the plugins folder and install automatically into Sketch 3. 
 
@@ -33,21 +36,21 @@ How it deals with capitalisation when replacing
 
 ####Where to match
 Where in your text layer it should match the search term
-* **Exact match only** will match your Find text against a text layer if it is *exactly* the same - excluding whitespace at the start or end (example "John Smith" will match text layers that read "John Smith").
+* **Exact match only** will match your Find text against a text layer if it is *exactly* the same (example "John Smith" will match text layers that read "John Smith").  If you have whitespace (or line breaks) at the start or end, this will *not* match and you should use "Anywhere in layer" as your option (or remove the whitespace - what's the point?!)
 * **Anywhere in layer** will do a partial match (example "Smith" will match against "John Smith" and replace the word "Smith" only).
-* **At start of layer** will only match at the start of the text layer ("John" will match against "John Smith", but "Smith" won't)
-* **At end of layer** will only match at the end of the text layer ("Smith" will match against "John Smith", but "John" won't)
+* **At start of layer** will only match at the start of the text layer ("John" will match against "John Smith", but "Smith" won't).  If you have whitespace at the start, this will *not* match.
+* **At end of layer** will only match at the end of the text layer ("Smith" will match against "John Smith", but "John" won't). If you have whitespace at the end, this will *not* match.
 
 ####Match whole words or phrases only
 Whether it matches whole or partial words
 * **Yes** (default) will match whole words ("oh" will not match "John")
 * **No** will match partial words ("oh" will match "John", if you wanted to change him to "Joan" for example)
 
-## Other features
+##Other features
 * **Default find text** - If you have a text field selected, it will use that text as the default find text
 * **Remembers your settings** - Remembers your settings for next time you do a find/replace (doesn't remember find/replace/scope as these will change each time)
 
-## Future development
+##Future development
 * **Regex search** - Maybe implement a full regex-based search for power users
 
 ##Issues or ideas
